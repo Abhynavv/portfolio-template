@@ -1,19 +1,22 @@
 {
-    "name": "Your Name",
-    "tagline": "Your one-line introduction",
-    "bio": "Write 2 or 3 sentences about yourself.",
+    "name": "Abhina Raj vc",
+    "tagline": "Aspiring AI engineer working with LLMs, MCP, and the tools around them",
+    "bio": "2nd-year CSE student at TKMCE who enjoys building with LLMs and seeing AI turn into something people can actually use. Currently exploring MCP and applied AI, and learning in public on GitHub. Based in Kozhikode, Kerala.",
     "skills": [
         "Git",
-        "HTML"
+        "HTML",
+        "Java",
+        "Python",
+        "LLM prompting"
     ],
     "projects": [
         {
-            "title": "My first project",
-            "desc": "What it does.",
-            "link": "https://github.com/yourname"
+            "title": "Cipherblitz",
+            "desc": "A time-based word and recognition game where players solve different types of challenges. Built in Java using OOP concepts.",
+            "link": "https://github.com/Abhynavv/soc"
         }
     ],
     "links": {
-        "github": "https://github.com/yourname"
+        "github": "https://github.com/Abhynavv"
     }
 }
