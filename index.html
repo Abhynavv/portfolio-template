@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -5,33 +6,122 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Abhinav Raj V C | Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="hero">
-    <h1 id="name"></h1>
-    <p id="tagline"></p>
-    <nav id="links"></nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        <span class="status-dot"></span>
+        COMPUTER SCIENCE ENGINEERING STUDENT
+      </div>
+
+      <h1 id="name"></h1>
+
+      <p class="hero-highlight" id="tagline"></p>
+
+      <p class="hero-description">
+        Passionate about software development, problem-solving
+        and technology. I enjoy exploring new ideas and turning
+        them into meaningful projects.
+      </p>
+
+      <nav id="links" class="hero-links"></nav>
+
+      <div class="hero-footer">
+        <span>JAVA</span>
+        <span>C</span>
+        <span>PYTHON</span>
+        <span>WEB DEVELOPMENT</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE VISUAL -->
+    <div class="hero-visual">
+
+      <div class="visual-card">
+
+        <div class="visual-top">
+          <span class="window-dots">● ● ●</span>
+          <span>DEVELOPER_PROFILE</span>
+        </div>
+
+        <div class="visual-code">
+          <p><span class="code-purple">const</span> developer = {</p>
+
+          <p class="indent">
+            name: <span class="code-green">'Abhinav'</span>,
+          </p>
+
+          <p class="indent">
+            field: <span class="code-green">'Computer Science'</span>,
+          </p>
+
+          <p class="indent">
+            passion: <span class="code-green">'Technology'</span>,
+          </p>
+
+          <p class="indent">
+            mindset: <span class="code-green">'Always Learning'</span>
+          </p>
+
+          <p>};</p>
+
+          <br>
+
+          <p><span class="code-purple">while</span> (learning) {</p>
+          <p class="indent">buildSomething();</p>
+          <p>}</p>
+        </div>
+
+        <div class="visual-bottom">
+          <span>●</span>
+          Always curious. Always building.
+        </div>
+
+      </div>
+
+      <div class="visual-decoration"></div>
+
+    </div>
+
   </header>
+
+
+  <!-- MAIN CONTENT -->
   <main>
-    <section>
+
+    <section id="about">
       <h2>About</h2>
       <p id="bio"></p>
     </section>
-    <section>
+
+    <section id="skills-section">
       <h2>Skills</h2>
       <ul id="skills" class="chips"></ul>
     </section>
-    <section>
+
+    <section id="projects-section">
       <h2>Projects</h2>
       <div id="projects" class="grid"></div>
     </section>
+
   </main>
+
+
   <footer id="footer"></footer>
+
   <script src="script.js"></script>
   <script src="scroll.js"></script>
-</body>
 
+</body>
 </html>

@@ -1,23 +1,26 @@
+
 {
-    "name": "Abhinav Raj VC",
-    "tagline": "Aspiring AI engineer working with LLMs, MCP, and the tools around them",
-    "bio": "2nd-year CSE student at TKMCE who enjoys building with LLMs and seeing AI turn into something people can actually use. Currently exploring MCP and applied AI, and learning in public on GitHub. Based in Kozhikode, Kerala.",
-    "skills": [
-        "Git",
-        "HTML",
-        "Java",
-        "Python",
-        "LLM prompting"
-    ],
-    "projects": [
-        {
-            "title": "Cipher Blitz (Team Project)",
-            "desc": "A time-based word and recognition game where players solve different types of challenges. Built in Java using OOP concepts.",
-            "link": "https://github.com/afnanshafique2707-netizen/cipherblitz"
-        }
-    ],
-    "links": {
-        "github": "https://github.com/Abhynavv",
-        "linkedin": "https://www.linkedin.com/in/abhinav-raj-vc-35a198381"
+  "name": "Abhinav Raj VC",
+  "tagline": "Aspiring Software Engineer | Exploring AI & Technology",
+  "bio": "I'm Abhinav Raj VC, a second-year Computer Science Engineering student at TKM College of Engineering. I'm currently strengthening my programming foundations in Java and Python while exploring web development and emerging AI technologies, including LLMs and MCP. I enjoy experimenting with new tools, collaborating on projects, solving problems, and continuously improving my technical skills. Based in Kozhikode, Kerala, India.",
+  "skills": [
+    "Java (Beginner)",
+    "Python (Beginner)",
+    "HTML & CSS",
+    "Git & GitHub",
+    "Object-Oriented Programming (Learning)",
+    "LLM Exploration",
+    "MCP Exploration"
+  ],
+  "projects": [
+    {
+      "title": "CipherBlitz — Team Project",
+      "desc": "A Java-based word and recognition game featuring multiple challenge modes and timed gameplay. Developed collaboratively using Java Swing and object-oriented programming concepts.",
+      "link": "https://github.com/afnanshafique2707-netizen/cipherblitz"
     }
+  ],
+  "links": {
+    "GitHub": "https://github.com/Abhynavv",
+    "LinkedIn": "https://www.linkedin.com/in/abhinav-raj-vc-35a198381"
+  }
 }
