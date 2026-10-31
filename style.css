@@ -207,3 +207,302 @@ h2 {
        padding: 20px 24px;
        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
    }
+   /* ===== Chrome noir theme ===== */
+:root {
+    --bg: #050506;
+    --fg: #f1f1f3;
+    --muted: #8d8f98;
+    --card: rgba(255, 255, 255, 0.03);
+    --accent: #d9dbe0;
+    --line: rgba(255, 255, 255, 0.18);
+}
+
+body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    background: radial-gradient(ellipse at 50% 0%, #26272c 0%, #0a0a0c 55%, #000 100%);
+    background-attachment: fixed;
+    color: var(--fg);
+}
+
+/* remove the earlier glow blobs */
+body::before,
+body::after {
+    display: none;
+}
+
+/* hero panel */
+.hero {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    min-height: 84vh;
+    margin: 24px auto;
+    padding: 22px 28px 34px;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: "nav" "space" "name" "tag";
+    text-align: center;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.45));
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* chrome blob */
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    width: min(300px, 52vw);
+    height: min(300px, 52vw);
+    transform: translate(-50%, -50%);
+    background: conic-gradient(from 200deg, #f7f7f9, #55565c, #ffffff, #1a1a1e, #c9cace, #3a3b40, #f7f7f9);
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    box-shadow: inset -26px -34px 70px rgba(0, 0, 0, 0.65),
+                inset 24px 22px 56px rgba(255, 255, 255, 0.4),
+                0 40px 80px rgba(0, 0, 0, 0.7);
+    animation: morph 10s ease-in-out infinite;
+}
+
+/* thin circle outline */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    width: min(520px, 90vw);
+    height: min(520px, 90vw);
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes morph {
+    0%, 100% {
+        border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        border-radius: 42% 58% 38% 62% / 58% 42% 62% 38%;
+        transform: translate(-50%, -52%) rotate(14deg);
+    }
+}
+
+/* nav as small spaced labels across the top */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+nav a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: var(--muted);
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+nav a:hover {
+    color: var(--fg);
+    background: none;
+}
+
+/* big wide name */
+.hero h1 {
+    grid-area: name;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.3rem, 4.4vw, 2.9rem);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.15;
+    background: none;
+    -webkit-text-fill-color: var(--fg);
+    color: var(--fg);
+    margin: 0;
+}
+
+.hero p {
+    grid-area: tag;
+    margin: 14px auto 0;
+    max-width: 38em;
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 960px;
+}
+
+/* section titles with a hairline */
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 56px;
+    border-left: none;
+    padding-left: 0;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+/* about panel */
+#bio {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 22px 26px;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+/* chips with checker marker */
+.chips li {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.chips li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 9px;
+    background: repeating-conic-gradient(#ffffff 0 25%, #333 0 50%) 0 0 / 4px 4px;
+}
+
+.chips li:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--fg);
+    transform: none;
+}
+
+/* project cards */
+.card {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.01));
+    border: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 22px;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--fg);
+    box-shadow: none;
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 16px;
+    border: 1px solid var(--line);
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.card a:hover {
+    background: var(--fg);
+    color: #000;
+}
+
+footer {
+    color: var(--muted);
+}
+/* ===== Scroll experience ===== */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+.hero,
+main section {
+    scroll-snap-align: start;
+}
+
+/* each section becomes a full panel */
+main section {
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* progress line at the top */
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, #8d8f98);
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 100;
+}
+
+/* fade and slide in on scroll (only when JS is running) */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.js .reveal.in {
+    opacity: 1;
+    transform: none;
+}
